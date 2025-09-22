@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowRight, Code, Palette, TrendingUp, Star, Users, Award, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
