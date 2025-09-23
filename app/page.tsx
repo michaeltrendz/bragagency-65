@@ -120,7 +120,7 @@ export default function AgencyPortfolio() {
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Web Application Development</span>
+                    <span>Web Application Developments</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
