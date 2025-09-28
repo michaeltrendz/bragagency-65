@@ -6,34 +6,42 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import Link from "next/link"
 
 export default function AgencyPortfolio() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-<img   src="/logo.png"  alt="BragAgency Logo"   className="h-8 w-auto"
-/>
-            <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
-                Services
-              </a>
-              <a href="#portfolio" className="text-muted-foreground hover:text-foreground transition-colors">
-                Portfolio
-              </a>
-              <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
-                About
-              </a>
-              <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                Contact
-              </a>
-            </div>
-            <Button>Get Started</Button>
-          </div>
-        </div>
-      </nav>
+<nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-16">
+      <img
+        src="/logo.png"
+        alt="BragAgency Logo"
+        className="h-8 w-auto"
+      />
+      <div className="hidden md:flex space-x-4">
+        {[
+          { name: "Services", href: "#services" },
+          { name: "Portfolio", href: "#portfolio" },
+          { name: "About", href: "#about" },
+          { name: "Contact", href: "#contact" },
+        ].map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            className="px-3 py-1 rounded-md transition-all duration-200 
+                       hover:bg-[#10D83D] hover:text-white hover:-translate-y-0.5"
+          >
+            {item.name}
+          </a>
+        ))}
+      </div>
+      <Button>Get Started</Button>
+    </div>
+  </div>
+</nav>
+
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -358,65 +366,95 @@ export default function AgencyPortfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="font-heading font-bold text-xl mb-4">BragAgency</div>
-              <p className="text-background/80 mb-4">
-                Transforming businesses through creative excellence and strategic innovation.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-background/80">
-                <li>Marketing</li>
-                <li>Software Development</li>
-                <li>Design & Graphics</li>
-                <li>Consulting</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-background/80">
-                <li>About Us</li>
-                <li>Portfolio</li>
-                <li>Careers</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
-              <ul className="space-y-2 text-background/80">
-                <li>
-  <a href="https://www.linkedin.com/company/108298687/" target="_blank" rel="noopener noreferrer">
-    LinkedIn
-  </a>
-</li>
-<li>
-  <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-    Twitter
-  </a>
-</li>
-<li>
-  <a href="https://instagram.com/brag.agency" target="_blank" rel="noopener noreferrer">
-    Instagram
-  </a>
-</li>
-<li>
-  <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer">
-    TikTok
-  </a>
-</li>
+<footer className="bg-foreground text-background py-12">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-4 gap-8">
+      <div>
+        <div className="font-heading font-bold text-xl mb-4">BragAgency</div>
+        <p className="text-background/80 mb-4">
+          Transforming businesses through creative excellence and
+          strategic innovation.
+        </p>
+      </div>
 
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-background/20 mt-8 pt-8 text-center text-background/60">
-            <p>&copy; 2025 BragAgency. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <div>
+        <h4 className="font-semibold mb-4">Company</h4>
+        <ul className="space-y-2 text-background/80">
+          {[
+            { name: "Marketing", href: "/about" },
+            { name: "Software Development", href: "/portfolio" },
+            { name: "Graphics and Product Design", href: "/careers" },
+            { name: "Marketing Consultancy", href: "/contact" },
+          ].map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.href}
+                className="px-2 py-1 rounded-md transition-all duration-200 
+                           hover:bg-[#10D83D] hover:text-white hover:-translate-y-0.5 inline-block"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="font-semibold mb-4">Company</h4>
+        <ul className="space-y-2 text-background/80">
+          {[
+            { name: "About Us", href: "/about" },
+            { name: "Portfolio", href: "/portfolio" },
+            { name: "Careers", href: "/careers" },
+            { name: "Contact", href: "/contact" },
+          ].map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.href}
+                className="px-2 py-1 rounded-md transition-all duration-200 
+                           hover:bg-[#10D83D] hover:text-white hover:-translate-y-0.5 inline-block"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="font-semibold mb-4">Connect</h4>
+        <ul className="space-y-2 text-background/80">
+          {[
+            {
+              name: "LinkedIn",
+              href: "https://www.linkedin.com/company/108298687/",
+            },
+            { name: "Twitter", href: "https://twitter.com/" },
+            { name: "Instagram", href: "https://instagram.com/" },
+            { name: "TikTok", href: "https://tiktok.com/" },
+          ].map((social) => (
+            <li key={social.name}>
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-2 py-1 rounded-md transition-all duration-200 
+                           hover:bg-[#10D83D] hover:text-white hover:-translate-y-0.5 inline-block"
+              >
+                {social.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div className="border-t border-background/20 mt-8 pt-8 text-center text-background/60">
+      <p>&copy; 2025 BragAgency. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
     </div>
   )
 }
