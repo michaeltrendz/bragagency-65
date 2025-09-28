@@ -14,7 +14,8 @@ export default function AgencyPortfolio() {
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-heading font-bold text-xl text-foreground">BragAgency</div>
+<img   src="/logo.png"  alt="BragAgency Logo"   className="h-8 w-auto"
+/>
             <div className="hidden md:flex space-x-8">
               <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
                 Services
