@@ -388,10 +388,27 @@ export default function AgencyPortfolio() {
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <ul className="space-y-2 text-background/80">
-                <li>LinkedIn</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-                <li>Dribbble</li>
+                <li>
+  <a href="https://www.linkedin.com/company/108298687/" target="_blank" rel="noopener noreferrer">
+    LinkedIn
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+    Twitter
+  </a>
+</li>
+<li>
+  <a href="https://instagram.com/brag.agency" target="_blank" rel="noopener noreferrer">
+    Instagram
+  </a>
+</li>
+<li>
+  <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer">
+    TikTok
+  </a>
+</li>
+
               </ul>
             </div>
           </div>
