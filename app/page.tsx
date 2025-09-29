@@ -51,13 +51,12 @@ export default function AgencyPortfolio() {
             <Badge variant="secondary" className="mb-6">
               Award-Winning Agency
             </Badge>
-            <h1 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl text-foreground mb-6">
-              Transform Your Business with
-              <span className="text-accent block">Creative Excellence</span>
-            </h1>
+            <h3 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl text-foreground mb-6">
+              Remember, People spend money when and where they feel good. 
+              <span className="text-accent block"> - Walt Disney</span>
+            </h3>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              We're a full-service agency specializing in Marketing, Software Development, and Design. From strategy to
-              execution, we deliver results that drive growth.
+              A creative digital agency delivering strategy, design, and marketing that drives results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8">
@@ -186,24 +185,24 @@ export default function AgencyPortfolio() {
       <section id="portfolio" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">Featured Work</h2>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">Success Stories</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Showcasing our latest projects and success stories
+              Showcasing our latest projects. 
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "E-commerce Platform",
-                category: "Software Development",
-                description: "Custom e-commerce solution with advanced analytics",
+                title: "Sport Propfirm - MSF",
+                category: "Project Management",
+                description: "Digital Presence and Brand Strategy",
                 image: "/modern-ecommerce-dashboard.png",
               },
               {
-                title: "Brand Redesign",
-                category: "Design & Branding",
-                description: "Complete brand identity overhaul for tech startup",
+                title: "Brand identity - Weighout",
+                category: "Graphic Design & Branding",
+                description: "Complete brand identity overhaul for Body Fitness startup",
                 image: "/modern-brand-identity-design-mockup.png",
               },
               {
@@ -345,8 +344,8 @@ export default function AgencyPortfolio() {
                 </label>
                 <select className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring">
                   <option>Marketing</option>
-                  <option>Software Development</option>
-                  <option>Design & Graphics</option>
+                  <option>Project Management</option>
+                  <option>Graphics and Product Design</option>
                   <option>All Services</option>
                 </select>
               </div>
@@ -381,10 +380,10 @@ export default function AgencyPortfolio() {
         <h4 className="font-semibold mb-4">Company</h4>
         <ul className="space-y-2 text-background/80">
           {[
-            { name: "Marketing", href: "/about" },
-            { name: "Software Development", href: "/portfolio" },
-            { name: "Graphics and Product Design", href: "/careers" },
-            { name: "Marketing Consultancy", href: "/contact" },
+            { name: "Marketing", href: "/marketing" },
+            { name: "Project Management", href: "/ProjectManagement" },
+            { name: "Graphics and Product Design", href: "/Graphics-and-Product-Design" },
+            { name: "Consultancy", href: "/Consultancy" },
           ].map((link) => (
             <li key={link.name}>
               <Link
